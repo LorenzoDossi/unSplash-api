@@ -53,5 +53,6 @@ formTag.addEventListener("submit", function(e) {
     if (searchTerm.length > 3)
         searchUnsplash(searchTerm).then(results => addResult(results))
 
+    inputTag.blur()
     e.preventDefault()
 })
