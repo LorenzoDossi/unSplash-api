@@ -45,7 +45,7 @@ section.results {
     grid-gap: 32px 32px;
     padding: 32px;
     max-width: 100%;
-    
+
     animation: fadeIn 1s .5s both;
 }
 
@@ -83,5 +83,9 @@ div.single-result p span.loading {
 @media screen and(max-width: 464px) {
     section.results {
         grid-template-columns: 1fr;
+
+        div.single-result div.image {
+            height: 300px;
+        }
     }
 }
