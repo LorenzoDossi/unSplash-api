@@ -80,6 +80,7 @@ div.single-result img {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 100;
+  cursor: pointer;
   -webkit-animation: fadeIn 1s .5s both;
           animation: fadeIn 1s .5s both;
 }

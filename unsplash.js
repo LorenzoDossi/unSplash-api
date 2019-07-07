@@ -20,7 +20,8 @@ const searchUnsplash = (term) => {
                     height: result.height,
                     name: result.user.name,
                     title: (result.description || "Site made by Lorenzo Dossi"),
-                    color: (result.color || "#ccc") + "33"
+                    color: (result.color || "#ccc") + "33",
+                    download: result.links.download
                 }
             })
         })
@@ -33,7 +34,7 @@ const addResult = results => {
         resultsTag.innerHTML += `
         <div class="single-result">
             <div class="image" style="background-color: ${result.color};">
-                <img src=${result.imageSrc} />
+                <a href=${result.download} > <img src=${result.imageSrc} /> </a>
             </div>
             <h2>${result.title}</h2>
             <p>By ${result.name} - ${result.width} x ${result.height}</p>
@@ -41,6 +42,10 @@ const addResult = results => {
         `
     })
 }
+
+inputTag.addEventListener("click", function() {
+    inputTag.value = ""
+})
 
 formTag.addEventListener("submit", function(e) {
 
