@@ -60,6 +60,9 @@ section.results {
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 32px 32px;
   padding: 32px;
+  max-width: 100%;
+  -webkit-animation: fadeIn 1s .5s both;
+          animation: fadeIn 1s .5s both;
 }
 
 div.single-result div.image {
@@ -90,5 +93,12 @@ div.single-result span.loading {
 
 div.single-result p span.loading {
   width: 30%;
+}
+
+@media screen and (max-width: 464px) {
+  section.results {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=main.css.map */

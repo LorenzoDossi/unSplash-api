@@ -45,8 +45,8 @@ const addResult = results => {
 formTag.addEventListener("submit", function(e) {
 
     const searchTerm = inputTag.value
-
-    console.log(searchUnsplash(searchTerm).then(results => addResult(results)))
+    if (searchTerm.length > 3)
+        searchUnsplash(searchTerm).then(results => addResult(results))
 
     e.preventDefault()
 })

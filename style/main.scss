@@ -44,6 +44,9 @@ section.results {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 32px 32px;
     padding: 32px;
+    max-width: 100%;
+    
+    animation: fadeIn 1s .5s both;
 }
 
 div.single-result div.image {
@@ -75,4 +78,10 @@ div.single-result span.loading {
 
 div.single-result p span.loading {
     width: 30%;
+}
+
+@media screen and(max-width: 464px) {
+    section.results {
+        grid-template-columns: 1fr;
+    }
 }
